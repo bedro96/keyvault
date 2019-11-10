@@ -5,10 +5,10 @@ To run this sample, you must have the following:
 * Must have a Azure Key Vault created and a key created. Must know the Key Identifier of your key and at least, Wrap key and Unwrap key is checked on permitted operations.
 ![KeyIdentifier](https://github.com/bedro96/keyvault/blob/master/keyIdentifier.PNG)
 * A Client ID and a Client Secret for a web application registered with Azure Active Directory.
-    ```bash
-    $ az ad sp create-for-rbac --name azurejava7154
-    ```
-      By executing this Azure Cli command, you will get appId, which is Client ID and password, which is Client Secret.
+```bash
+$ az ad sp create-for-rbac --name azurejava7154
+```
+    By executing this Azure Cli command, you will get appId, which is Client ID and password, which is Client Secret.
 * Configure this service principal only have wrap key and unwrap key cryptographic operations selected in key permissions.
 ![KeyIdentifier](https://github.com/bedro96/keyvault/blob/master/keyvault_access_policies.PNG)
 * When you clone this git, change line 110 in App.java to reflect new location of sample xml file.
