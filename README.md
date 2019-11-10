@@ -2,7 +2,7 @@
 
 To run this sample, you must have the following:
 
-* A URI to a secret in an Azure Key Vault
+* Must have a Azure Key Vault created and a key created. Must know the Key Identifier of your key and at least Wrap key and Unwrap key is checked on permitted operations.
 * A Client ID and a Client Secret for a web application registered with Azure Active Directory that has access to your Key Vault.
 * Configure this service principal only have wrap key and unwrap key cryptographic operations selected in key permissions.
 
