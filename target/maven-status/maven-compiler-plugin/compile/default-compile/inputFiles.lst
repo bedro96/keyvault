@@ -1,5 +1,5 @@
-/home/kunho/maven/javaprj/src/main/java/CustomKeyVaultCredentials.java
-/home/kunho/maven/javaprj/src/main/java/ReadFileToString.java
-/home/kunho/maven/javaprj/src/main/java/PropertyLoader.java
-/home/kunho/maven/javaprj/src/main/java/App.java
-/home/kunho/maven/javaprj/src/main/java/AES.java
+/home/kunhoko/maven/keyvault/src/main/java/ReadFileToString.java
+/home/kunhoko/maven/keyvault/src/main/java/AES.java
+/home/kunhoko/maven/keyvault/src/main/java/CustomKeyVaultCredentials.java
+/home/kunhoko/maven/keyvault/src/main/java/PropertyLoader.java
+/home/kunhoko/maven/keyvault/src/main/java/App.java
