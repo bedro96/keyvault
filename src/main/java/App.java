@@ -67,7 +67,7 @@ public class App
 		
 		// Generate a key
 		String randomDataEncryptionKey = this.generateKey();
-		System.out.println("This is random generated DataEnxryptionKey: " + randomDataEncryptionKey);
+		System.out.println("This is random generated DataEncryptionKey: " + randomDataEncryptionKey);
 
 		// Read Azure configuration file and get ClientID, ClientCredentials, and AzureKeyVaultKeyIdentifier.
 		// This credential only have wrap key and unwrp key cryptographic operations allowed and nothing else. 
@@ -82,7 +82,7 @@ public class App
 		KeyVaultClient kvc = KeyVaultClientService.create(config);
 		
 		// Encryption with CMK
-        byte[] byteText = randomDataEncryptionKey.getBytes("UTF-16");
+        byte[] byteText = randomDataEncryptionKey.getBytes("UTF-8");
         Future<KeyOperationResult> result = kvc.wrapKeyAsync(keyIdentifier, JsonWebKeyEncryptionAlgorithm.RSAOAEP, byteText); 
 		KeyOperationResult keyoperationResult = result.get();
 		
@@ -95,8 +95,8 @@ public class App
 		byte[] wrappedDataEncryptionKey = Base64.getDecoder().decode(stringedWeappedRandomDataEncryptionKey);
 		result = kvc.unwrapKeyAsync(keyIdentifier, "RSA-OAEP", wrappedDataEncryptionKey);
 		
-        String decryptedResult = new String(result.get().getResult(), "UTF-16");
-		System.out.println("Decpryted Data Encryption Key: " + decryptedResult );
+        String decryptedResult = new String(result.get().getResult(), "UTF-8");
+		System.out.println("Decrypted Data Encryption Key: " + decryptedResult );
 		if(decryptedResult.equals(randomDataEncryptionKey)) {
 			System.out.println("It matches with original Data Encryption Key");
 		} else {
