@@ -111,7 +111,7 @@ public class App
 		String xmlFiletoString = new ReadFileToString().readLineByLineJava8(filePath);
 		System.out.println(xmlFiletoString);
 	 
-		// encrpt the file content decrypt with a key unwapped with CMK 
+		// Encrpt the file content then decrypt with a key unwapped with CMK 
 		String encryptedString = aesKey.encrypt(xmlFiletoString, randomDataEncryptionKey) ;
 		String decryptedString = aesKey.decrypt(encryptedString, decryptedResult) ;
 		
