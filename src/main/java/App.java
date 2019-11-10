@@ -107,7 +107,7 @@ public class App
 		AES aesKey = new AES();
 		
 		// Change the file location of test xml file
-		String filePath = "/home/kunho/maven/javaprj/pom_backup.xml";
+		String filePath = "/home/kunhoko/maven/keyvault/pom_backup.xml";
 		String xmlFiletoString = new ReadFileToString().readLineByLineJava8(filePath);
 		System.out.println(xmlFiletoString);
 	 
